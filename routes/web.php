@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\FormerController;
+use App\Http\Livewire\UserForm;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', [UserForm::class, 'render']);
+Route::post('/form/create', [FormerController::class, 'create'])->name('form.create');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

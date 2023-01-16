@@ -13,6 +13,8 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^9.0",
         "laravel/tinker": "^2.0",
+        "livewire/livewire": "^2.11",
+        "protonemedia/laravel-form-components": "^3.7",
         "tcg/voyager": "^1.5"
     },
     "require-dev": {
